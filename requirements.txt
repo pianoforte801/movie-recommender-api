@@ -1,10 +1,6 @@
-pip freeze > requirements.txt
-```
-
-**3. Create `.gitignore` file:**
-Create a new file called `.gitignore` (no extension) with this content:
-```
-venv/
-__pycache__/
-*.pyc
-.env
+pandas>=1.5.0
+numpy>=1.21.0
+scikit-learn>=1.0.0
+flask>=2.0.0
+gunicorn>=20.0.0
+werkzeug>=2.0.0
