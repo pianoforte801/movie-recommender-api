@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
+from flask_cors import CORS   # 👈 new import
 
 app = Flask(__name__)
+CORS(app)                     # 👈 enable all origins
+
 
 # Load the data once when the server starts
 print("Loading data...")
