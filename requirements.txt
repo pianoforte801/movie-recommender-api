@@ -1,9 +1,8 @@
 pip freeze > requirements.txt
 ```
 
-**Create `.gitignore`** (don't upload unnecessary files):
-
-Create a file called `.gitignore` and put:
+**3. Create `.gitignore` file:**
+Create a new file called `.gitignore` (no extension) with this content:
 ```
 venv/
 __pycache__/
