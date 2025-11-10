@@ -1,0 +1,11 @@
+pip freeze > requirements.txt
+```
+
+**Create `.gitignore`** (don't upload unnecessary files):
+
+Create a file called `.gitignore` and put:
+```
+venv/
+__pycache__/
+*.pyc
+.env
