@@ -15,9 +15,16 @@ user_movie_matrix=ratings.pivot_table(
     values='rating'
 ).fillna(0)
 
-movie_similarity=cosine_similarity(user_movie_matrix)
+movie_similarity=cosine_similarity(user_movie_matrix.T)  # ADD .T HERE - IMPORTANT FIX!
 
 print("data loaded server is ready")
+
+@app.route('/')
+def home():
+    return jsonify({
+        "message": "Movie Recommender API",
+        "usage": "/recommend?movie=Toy Story&num=10"
+    })
 
 @app.route('/recommend')
 def recommend():
